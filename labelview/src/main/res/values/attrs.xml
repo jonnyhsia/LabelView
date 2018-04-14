@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LabelView">
+        <attr name="label" format="string|reference"/>
+        <attr name="labelTextColor" format="color"/>
+        <attr name="labelTextSize" format="float"/>
+        <attr name="labelIconPadding" format="dimension"/>
+        <attr name="labelIconSize" format="dimension"/>
+        <attr name="labelFontFamily" format="reference"/>
+
+        <attr name="subLabel" format="string|reference"/>
+        <attr name="subLabelTextColor" format="color"/>
+        <attr name="subLabelTextSize" format="float"/>
+        <attr name="subLabelIconPadding" format="dimension"/>
+        <attr name="subLabelFontFamily" format="reference"/>
+
+        <attr name="iconStart" format="reference"/>
+        <attr name="iconEnd" format="reference"/>
+        <attr name="iconEndSize" format="dimension"/>
+
+        <attr name="labelType" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="_switch" value="1"/>
+        </attr>
+
+        <attr name="checked" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="LabelGroup">
+        <attr name="android:orientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="android:baselineAligned" format="boolean"/>
+        <attr name="android:weightSum" format="float"/>
+        <attr name="android:baselineAlignedChildIndex" format="float"/>
+        <attr name="measureWithLargestChild" format="boolean"/>
+        <attr name="labelDivider" format="reference"/>
+        <attr name="showLabelDividers">
+            <flag name="none" value="0"/>
+            <flag name="beginning" value="1"/>
+            <flag name="middle" value="2"/>
+            <flag name="end" value="4"/>
+        </attr>
+        <attr name="labelDividerPadding" format="dimension"/>
+        <attr name="labelDividerPaddingSecondary" format="dimension"/>
+        <attr name="labelDividerPaddingSecondaryEnd" format="dimension"/>
+
+        <!--since 0.1.1-->
+
+    </declare-styleable>
+
+
+    <declare-styleable name="LabelGroup_Layout">
+        <attr name="android:layout_weight" format="float"/>
+        <attr name="android:layout_gravity" format="enum">
+        </attr>
+        <attr name="showDivider" format="boolean"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context="com.jonnyhsia.labelview.MainActivity">
+
+    <com.jonnyhsia.labelview.LabelGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:labelDivider="@drawable/divider_account_label"
+        app:labelDividerPaddingSecondary="20dp"
+        app:showLabelDividers="beginning|middle|end">
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/label1"
+            style="@style/Label.Switch"
+            app:label="@string/app_name"
+            app:subLabel="@string/app_name"/>
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/label2"
+            style="@style/Label.Text"
+            app:iconEnd="@mipmap/ic_next"
+            app:label="@string/app_name"
+            app:subLabel="@string/app_name"
+            app:subLabelIconPadding="4dp"/>
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/label3"
+            style="@style/Label.Text"
+            app:iconStart="@mipmap/ic_launcher"
+            app:label="@string/app_name"
+            app:labelIconPadding="12dp"
+            app:subLabel="@string/app_name"/>
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/label4"
+            style="@style/Label.Text"
+            app:iconEnd="@mipmap/ic_next"
+            app:label="@string/app_name"
+            app:labelIconPadding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/indicator_inbox"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/label_icon_end"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="7"/>
+
+        </com.jonnyhsia.labelview.LabelView>
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelCalendar"
+            style="@style/Label.Text"
+            app:label="选择日期"
+            app:subLabel="日期"/>
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:showDivider="false"
+            tools:visibility="visible"/>
+
+    </com.jonnyhsia.labelview.LabelGroup>
+
+</LinearLayout>
