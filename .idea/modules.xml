@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LabelView.iml" filepath="$PROJECT_DIR$/LabelView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labelview/labelview.iml" filepath="$PROJECT_DIR$/labelview/labelview.iml" />
     </modules>
   </component>
 </project>

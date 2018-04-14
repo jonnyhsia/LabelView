@@ -1,83 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#F5F5F5"
+    android:orientation="vertical"
     tools:context="com.jonnyhsia.labelview.MainActivity">
 
     <com.jonnyhsia.labelview.LabelGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:animateLayoutChanges="true"
         android:background="@android:color/white"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        app:labelDivider="@drawable/divider_account_label"
+        app:labelDivider="@drawable/label_divider_default"
         app:labelDividerPaddingSecondary="20dp"
         app:showLabelDividers="beginning|middle|end">
 
         <com.jonnyhsia.labelview.LabelView
-            android:id="@+id/label1"
+            android:id="@+id/labelSwitch"
             style="@style/Label.Switch"
+            app:checked="true"
             app:label="@string/app_name"
             app:subLabel="@string/app_name"/>
-
-        <com.jonnyhsia.labelview.LabelView
-            android:id="@+id/label2"
-            style="@style/Label.Text"
-            app:iconEnd="@mipmap/ic_next"
-            app:label="@string/app_name"
-            app:subLabel="@string/app_name"
-            app:subLabelIconPadding="4dp"/>
-
-        <com.jonnyhsia.labelview.LabelView
-            android:id="@+id/label3"
-            style="@style/Label.Text"
-            app:iconStart="@mipmap/ic_launcher"
-            app:label="@string/app_name"
-            app:labelIconPadding="12dp"
-            app:subLabel="@string/app_name"/>
-
-        <com.jonnyhsia.labelview.LabelView
-            android:id="@+id/label4"
-            style="@style/Label.Text"
-            app:iconEnd="@mipmap/ic_next"
-            app:label="@string/app_name"
-            app:labelIconPadding="12dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:background="@drawable/indicator_inbox"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="11sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/label_icon_end"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="7"/>
-
-        </com.jonnyhsia.labelview.LabelView>
 
         <com.jonnyhsia.labelview.LabelView
             android:id="@+id/labelCalendar"
-            style="@style/Label.Text"
+            style="@style/Label.Toggle"
             app:label="选择日期"
-            app:subLabel="日期"/>
+            app:subLabel=""/>
 
         <CalendarView
             android:id="@+id/calendar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
+            android:layout_marginTop="-12dp"
             app:showDivider="false"
             tools:visibility="visible"/>
 
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelClick"
+            style="@style/Label.Text"
+            app:iconEnd="@mipmap/ic_next"
+            app:label="试着点击该 Label">
+
+            <TextView
+                android:id="@id/label_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/indicator_inbox"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/label_icon_end"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="5"
+                tools:visibility="visible"/>
+
+        </com.jonnyhsia.labelview.LabelView>
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelPreference"
+            style="@style/Label.Toggle"
+            app:iconEnd="@mipmap/ic_next"
+            app:label="绑定了SharedPreference"
+            app:subLabel="">
+
+        </com.jonnyhsia.labelview.LabelView>
+
+        <LinearLayout
+            android:id="@+id/layoutSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F8F8F8"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:visibility="gone"
+            app:showDivider="false"
+            tools:visibility="visible">
+
+            <EditText
+                android:id="@+id/inputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入文字并提交保存"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="?android:selectableItemBackground"
+                android:padding="12dp"
+                android:text="提交"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelFull"
+            style="@style/Label.Text"
+
+            app:iconEnd="@mipmap/ic_next"
+            app:iconEndSize="16dp"
+            app:iconStart="@mipmap/ic_launcher"
+            app:innerMargin="24dp"
+            app:label="@string/app_name"
+            app:labelFontFamily="sans-serif-medium"
+            app:labelIconPadding="10dp"
+            app:labelIconSize="16dp"
+            app:labelTextColor="@color/colorAccent"
+            app:labelTextSize="20"
+            app:labelType="normal"
+            app:subLabel="@string/app_name"
+            app:subLabelFontFamily="sans-serif-medium"
+            app:subLabelIconPadding="4dp"
+            app:subLabelTextColor="@color/colorAccent"
+            app:subLabelTextSize="14"/>
+
     </com.jonnyhsia.labelview.LabelGroup>
 
-</LinearLayout>
+</ScrollView>

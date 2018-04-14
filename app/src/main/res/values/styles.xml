@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Label">
@@ -23,6 +25,10 @@
 
     <style name="Label.Switch">
         <item name="labelType">_switch</item>
+    </style>
+
+    <style name="Label.Toggle">
+        <item name="labelType">toggle</item>
     </style>
 
 </resources>

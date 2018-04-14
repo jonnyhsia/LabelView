@@ -1,5 +1,6 @@
 package com.jonnyhsia.labelview
 
+import android.content.SharedPreferences
 import android.support.constraint.ConstraintLayout
 import android.util.Log
 import android.util.TypedValue
@@ -32,4 +33,15 @@ internal fun ImageView.loadImage(res: Int) {
     } else {
         Glide.with(this).load(res).into(this)
     }
+}
+
+internal fun <T> SharedPreferences.getValue(key: String, defaultValue: T): T {
+    return when (defaultValue) {
+        is Boolean -> getBoolean(key, defaultValue)
+        is Int -> getInt(key, defaultValue)
+        is Long -> getLong(key, defaultValue)
+        is Float -> getFloat(key, defaultValue)
+        is String -> getString(key, defaultValue)
+        else -> throw IllegalStateException("不支持的 SharedPreference 类型")
+    } as T
 }
