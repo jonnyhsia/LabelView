@@ -4,7 +4,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.novoda.bintray-release'
 
 ext {
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.2.0'
 }
 android {
     compileSdkVersion 27

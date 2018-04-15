@@ -1,4 +1,4 @@
-package com.jonnyhsia.labelview
+package com.jonnyhsia.sample
 
 import android.content.Context
 import android.os.Bundle

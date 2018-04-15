@@ -1,4 +1,4 @@
-package com.jonnyhsia.labelview
+package com.jonnyhsia.sample
 
 import org.junit.Test
 
