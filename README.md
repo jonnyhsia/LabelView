@@ -1,10 +1,11 @@
-# LabelView
-A convenient and powerful text layout library for android.
-<br>
+# Label View
+[![Bintray](https://img.shields.io/bintray/v/jianhaoxia/maven/label-view.svg)](https://bintray.com/jianhaoxia/maven/label-view) ![](https://img.shields.io/badge/language-kotlin-green.svg) ![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
 
-### Getting Start
+一个简单、可拓展性强的文本控件与布局。
 
-In your module level `build.gralde`:
+## 开始使用
+
+在 `module` 的 `build.gralde` 中:
 
 ```groovy
 dependencies {
@@ -12,4 +13,6 @@ dependencies {
 }
 ```
 
-<br>
+## 如何使用
+
+详见 [Sample](https://github.com/jonnyhsia/LabelView/tree/master/app)
